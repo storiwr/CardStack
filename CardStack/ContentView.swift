@@ -10,7 +10,6 @@ struct CardInfo: Codable, Identifiable {
     let id = UUID()
     let name: String
     let cardBody: String
-//    let amount: Int
 }
 
 class Cards: ObservableObject {

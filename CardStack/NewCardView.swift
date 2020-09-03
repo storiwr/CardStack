@@ -12,7 +12,7 @@ struct NewCardView: View {
     @ObservedObject var cards: Cards
     @State private var name = ""
     @State private var cardBody = ""
-//    @State private var amount = ""
+
     
     var body: some View {
         NavigationView {
@@ -23,11 +23,10 @@ struct NewCardView: View {
                 }
                 .navigationBarTitle("New Card")
                 .navigationBarItems(trailing: Button("Done") {
-//                if let actualAmount = Int(self.amount) {
+
                 let item = CardInfo(name: self.name, cardBody: self.cardBody)
                     self.cards.items.append(item)
                     self.presentationMode.wrappedValue.dismiss()
-//            }
         })
     }
     }
