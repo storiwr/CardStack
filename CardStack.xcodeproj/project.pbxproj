@@ -12,6 +12,7 @@
 		DC6D320324FC31150020AD3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC6D320224FC31150020AD3E /* Assets.xcassets */; };
 		DC6D320624FC31150020AD3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC6D320524FC31150020AD3E /* Preview Assets.xcassets */; };
 		DC6D320E24FE94120020AD3E /* CardDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6D320D24FE94120020AD3E /* CardDataModel.swift */; };
+		DCB765982501771600D12594 /* NewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB765972501771600D12594 /* NewCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DC6D320524FC31150020AD3E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DC6D320724FC31150020AD3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC6D320D24FE94120020AD3E /* CardDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDataModel.swift; sourceTree = "<group>"; };
+		DCB765972501771600D12594 /* NewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				DC6D31FE24FC31130020AD3E /* CardStackApp.swift */,
 				DC6D320024FC31130020AD3E /* ContentView.swift */,
+				DCB765972501771600D12594 /* NewCardView.swift */,
 				DC6D320D24FE94120020AD3E /* CardDataModel.swift */,
 				DC6D320224FC31150020AD3E /* Assets.xcassets */,
 				DC6D320724FC31150020AD3E /* Info.plist */,
@@ -144,6 +147,7 @@
 				DC6D320124FC31130020AD3E /* ContentView.swift in Sources */,
 				DC6D320E24FE94120020AD3E /* CardDataModel.swift in Sources */,
 				DC6D31FF24FC31130020AD3E /* CardStackApp.swift in Sources */,
+				DCB765982501771600D12594 /* NewCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
