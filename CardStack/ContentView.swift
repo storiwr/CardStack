@@ -65,40 +65,6 @@ struct ContentView: View {
         cards.items.remove(atOffsets: offsets)
     }
 }
-
-//struct DetailView: View {
-//    @ObservedObject private var card = CardInfo()
-//    var body: some View {
-//        NavigationView {
-//            List {
-//                Text(card.cardBody)
-//                Text(card.name)
-//            }.navigationBarTitle(Text("Card Title"))
-//            .navigationBarItems(trailing: EditButton())
-//
-//        }
-//    }
-//}
-    
-//    struct NewView: View {
-//        @ObservedObject private var card = CardInfo()
-//        @Environment(\.presentationMode) var presentationMode
-//
-//        var body: some View {
-//            NavigationView {
-//                List {
-//                    TextField("Title", text: $card.name)
-//                    TextField("Body", text: $card.cardBody)
-//                }.navigationBarTitle(Text("NewCard"))
-//                .navigationBarItems(trailing:
-//                                        Button("Done") {
-//                                            self.presentationMode.wrappedValue.dismiss()
-//                                        }
-//
-//            )}
-//        }
-//    }
-
     
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
