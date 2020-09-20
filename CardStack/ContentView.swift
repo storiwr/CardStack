@@ -12,32 +12,12 @@ struct CardInfo: Codable, Identifiable {
     let cardBody: String
 }
 
-class Cards: ObservableObject {
-    @Published var items: [CardInfo] {
-        didSet {
-            let encoder = JSONEncoder()
-            if let encoded = try? encoder.encode(items) {
-                UserDefaults.standard.set(encoded, forKey: "Items")
-            }
-        }
-    }
-    init() {
-        if let items = UserDefaults.standard.data(forKey: "Items") {
-            let decoder = JSONDecoder()
-            if let decoded = try? decoder.decode([CardInfo].self, from: items) {
-                self.items = decoded
-                return
-            }
-        }
-
-        self.items = []
-    }
-}
 
 struct ContentView: View {
-    @ObservedObject var cards = Cards()
+    @ObservedObject var cards = CardStack()
     @State private var showingNewCardView = false
     var body: some View {
+        
         NavigationView {
             List {
                 ForEach(cards.items) { card in
@@ -68,7 +48,7 @@ struct ContentView: View {
     
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(cards: CardStack())
     }
 }
 

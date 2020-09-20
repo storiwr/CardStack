@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NewCardView: View {
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var cards: Cards
+    @ObservedObject var cards: CardStack
     @State private var name = ""
     @State private var cardBody = ""
 
@@ -35,6 +35,6 @@ struct NewCardView: View {
 
 struct NewCardView_Previews: PreviewProvider {
     static var previews: some View {
-        NewCardView(cards: Cards())
+        NewCardView(cards: CardStack())
     }
 }
