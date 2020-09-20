@@ -6,13 +6,6 @@
 
 import SwiftUI
 
-struct CardInfo: Codable, Identifiable {
-    let id = UUID()
-    let name: String
-    let cardBody: String
-}
-
-
 struct ContentView: View {
     @ObservedObject var cards = CardStack()
     @State private var showingNewCardView = false
@@ -21,10 +14,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(cards.items) { card in
-                    VStack {
-                        Text(card.name)
-                        Text(card.cardBody)
-                    }
+                    ListCellView(card: card)
                     
                 }.onDelete(perform: removeItems)
                 

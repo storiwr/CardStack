@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-//struct ListCellView: View {
-//    @ObservedObject var cards: CardStack
-//    var body: some View {
-//        HStack {
-//            Text($cards.name)
-//            Spacer()
-//        }
-//    }
-//}
-//
-//struct ListCellView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ListCellView(cards: Cards())
-//    }
-//}
+struct ListCellView: View {
+    var card: CardInfo
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(card.name)
+            Text(card.cardBody)
+        }
+    }
+}
+
+struct ListCellView_Previews: PreviewProvider {
+    static var previews: some View {
+        ListCellView(card: CardInfo(name:"Title", cardBody: "Testing 123"))
+    }
+}
